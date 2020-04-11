@@ -1,0 +1,12 @@
+{
+  "name": "ese-interview-sample-code",
+  "version": "1.0.0",
+  "description": "ESE 2차 면접 강의 자료 중 일부입니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hong Shik Branden Kim",
+  "license": "ISC"
+}
