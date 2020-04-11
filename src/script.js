@@ -31,14 +31,15 @@ const app = {
     const TotalRecovered = document
       .querySelector("#TotalRecovered")
       .querySelector(".divValue");
-    TotalConfirmed.textContent = this.data.Global.TotalConfirmed;
-    TotalDeaths.textContent = this.data.Global.TotalDeaths;
-    TotalRecovered.textContent = this.data.Global.TotalRecovered;
+    TotalConfirmed.textContent = this.data.Global.TotalConfirmed.toLocaleString();
+    TotalDeaths.textContent = this.data.Global.TotalDeaths.toLocaleString();
+    TotalRecovered.textContent = this.data.Global.TotalRecovered.toLocaleString();
   },
   renderDetails: function () {
     const { Countries } = this.data;
     for (let i = Countries.length - 1; i > 0; i--) {
-      const div = document.querySelector("#detail");
+      const detailDiv = document.querySelector("#detail");
+      const containerDiv = document.createElement("div");
       const countryDetail = document.createElement("span");
       const totalConfirmedDetail = document.createElement("span");
       const totalDeathsDetail = document.createElement("span");
@@ -47,12 +48,13 @@ const app = {
       totalConfirmedDetail.textContent = Countries[i].TotalConfirmed;
       totalDeathsDetail.textContent = Countries[i].TotalDeaths;
       totalRecoveredDetail.textContent = Countries[i].TotalRecovered;
-      div.append(
+      containerDiv.append(
         countryDetail,
         totalConfirmedDetail,
         totalDeathsDetail,
         totalRecoveredDetail
       );
+      detailDiv.appendChild(containerDiv);
     }
   },
 };

@@ -1,5 +1,8 @@
 body {
   font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header {
@@ -25,13 +28,28 @@ header {
 }
 
 #summary #TotalConfirmed {
-  background: plum;
+  background: whitesmoke;
   color: black;
   text-align: center;
   min-width: 120px;
   margin: 0.5em 1em;
   padding: 1em 2em;
   border: 0;
+}
+
+#summary #TotalConfirmed div {
+  padding: 10px;
+}
+
+#summary #TotalConfirmed .divLabel {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#summary #TotalConfirmed .divValue {
+  font-size: 28px;
+  padding: 10px;
 }
 
 #summary #TotalDeaths {
@@ -50,6 +68,7 @@ header {
   text-align: center;
   min-width: 120px;
   margin: 0.5em 1em;
+  margin: 1em 2em;
   padding: 1em 2rem;
   border: 0;
 }
@@ -67,4 +86,26 @@ header {
   background: white;
   padding: 0.5rem;
   border: 0;
+}
+
+#detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#detail div {
+  min-width: 500px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#detail div span {
+  border-bottom: 1px solid;
+  border-color: black;
+  background-color: whitesmoke;
+  padding: 0.5em;
 }
