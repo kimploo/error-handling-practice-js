@@ -13,37 +13,37 @@
       type="text/css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>COVID-19 Dashboard</title>
   </head>
   <body style="height: 100%;">
-    <header class="header">
-      <h1>COVID-19 DASHBOARD</h1>
-    </header>
     <div id="main">
+      <header class="header">
+        <h1>COVID-19 DASHBOARD</h1>
+      </header>
       <div id="summary">
-        <div id="TotalConfirmed">
-          <div class="divLabel">Confirmed</div>
+        <div class="summaryInfo" id="TotalConfirmed">
+          <div class="divLabel">Confirmed 😷</div>
           <div class="divValue">Loading...</div>
         </div>
-        <div id="TotalDeaths">
-          <div class="divLabel">Deaths</div>
+        <div class="summaryInfo" id="TotalDeaths">
+          <div class="divLabel">Deaths 💀</div>
           <div class="divValue">Loading...</div>
         </div>
-        <div id="TotalRecovered">
-          <div class="divLabel">Recovered</div>
+        <div class="summaryInfo" id="TotalRecovered">
+          <div class="divLabel">Recovered 😇</div>
           <div class="divValue">Loading..</div>
         </div>
         <!-- three divs show basic covid info -->
       </div>
       <div id="search">
-        <form method="post">
+        <form id="searchForm" method="post">
           <input
             type="search"
             id="searchInput"
             placeholder="search your location..."
             required
           />
-          <button type="submit">search</button>
+          <button type="submit" id="searchButton">search</button>
         </form>
       </div>
       <div id="detail"></div>
